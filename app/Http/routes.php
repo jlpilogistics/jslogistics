@@ -20,6 +20,7 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('/users', 'UsersController');
+Route::resource('/quotations', 'QuotesController');
 Route::get('demo',function(){
 
     return view('admin.demo');

@@ -7,7 +7,7 @@
                     </li>
                     <li><a class="menu-item" href="dashboard-crypto.html" data-i18n="nav.dash.crypto">Crypto</a>
                     </li>
-                    <li class="active"><a class="menu-item" href="dashboard-sales.html" data-i18n="nav.dash.sales">Sales</a>
+                    <li class="menu-item"><a class="menu-item" href="dashboard-sales.html" data-i18n="nav.dash.sales">Sales</a>
                     </li>
                 </ul>
             </li>
