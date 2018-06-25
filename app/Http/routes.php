@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return redirect('/users'); });
 
-Route::auth();
+//Route::auth();
+$this->get('login', 'Auth\AuthController@showLoginForm')->name('auth.login');
+$this->post('login', 'Auth\AuthController@login')->name('auth.login');
+$this->post('logout', 'Auth\AuthController@logout')->name('auth.logout');
 
 Route::get('/home', 'HomeController@index');
 
@@ -25,3 +26,9 @@ Route::get('demo',function(){
 
     return view('admin.demo');
 });
+
+
+//Route::get('login',function(){
+//
+//    return view('auth.login');
+//});
