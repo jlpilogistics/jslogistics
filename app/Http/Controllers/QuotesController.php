@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Client;
 use App\Quotation;
-use App\Sender;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -20,7 +20,7 @@ class QuotesController extends Controller
 //        return view('admin.quotation.index');
 // this is right       $sender = Sender::with('quotations')->get();
         $quote = Quotation::all();
-        $sender = Sender::with('quotation')->findMany(['1']);
+        $client = Client::with('quotation')->findMany(['1']);
 
 
 //        return $sender->quotations;
@@ -35,7 +35,7 @@ class QuotesController extends Controller
 
 //       return $quote->commodity;
 
-        return view('admin.quotation.index', compact( 'quote','sender'));
+        return view('admin.quotation.index', compact( 'quote','client'));
 
     }
 
@@ -104,4 +104,6 @@ class QuotesController extends Controller
     {
         //
     }
+
+
 }

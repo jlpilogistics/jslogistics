@@ -14,9 +14,16 @@ class CreateQuotationsTable extends Migration
     {
         Schema::create('quotations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('sender_id')->unSigned()->nullable();
-            $table->string('loadType');
+            $table->integer('client_id')->unSigned();
+            $table->string('mode');
+            $table->string('container');
+            $table->integer('length');
+            $table->integer('width');
+            $table->integer('height');
+            $table->integer('weight');
+            $table->integer('quantity');
             $table->string('commodity');
+            $table->longText('message');
             $table->timestamps();
         });
     }

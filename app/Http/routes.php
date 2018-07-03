@@ -11,20 +11,19 @@
 |
 */
 
-Route::get('/', function () { return redirect('/users'); });
-
+Route::get('/', function () { return redirect('/admin/index'); });
 //Route::auth();
 $this->get('login', 'Auth\AuthController@showLoginForm')->name('auth.login');
 $this->post('login', 'Auth\AuthController@login')->name('auth.login');
 $this->post('logout', 'Auth\AuthController@logout')->name('auth.logout');
+// Change Password Routes...
+$this->get('change_password', 'Auth\ChangePasswordController@showChangePasswordForm')->name('auth.change_password');
+$this->patch('change_password', 'Auth\ChangePasswordController@changePassword')->name('auth.change_password');
 
-Route::get('/home', 'HomeController@index');
 
-Route::resource('/users', 'UsersController');
-Route::resource('/quotations', 'QuotesController');
-Route::get('demo',function(){
-
-    return view('admin.demo');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/admin/index', 'HomeController@index');
+    Route::resource('/quotations', 'QuotesController');
 });
 
 
@@ -32,3 +31,11 @@ Route::get('demo',function(){
 //
 //    return view('auth.login');
 //});
+
+Route::get('Main', 'Client\HomeController@index');
+Route::get('about', 'Client\HomeController@showAbout');
+Route::get('location', 'Client\HomeController@showLocation');
+Route::get('domestic', 'Client\HomeController@showDomestic');
+Route::get('import', 'Client\HomeController@showImport');
+Route::get('export', 'Client\HomeController@showExport');
+Route::resource('quote', 'Client\QuotesController');

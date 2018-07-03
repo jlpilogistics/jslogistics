@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4eaff0b3cc8c667b7dd50b8f1cbe408",
+    "content-hash": "3fa8df0abae9b837b85a2b3aac86ccbc",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -127,6 +127,44 @@
                 }
             ],
             "time": "2016-06-13T19:28:20+00:00"
+        },
+        {
+            "name": "bmartus/laravel-shippo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bmartus/laravel-shippo.git",
+                "reference": "eb073e294ea8879f13de7d2a759dd56cded89efa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bmartus/laravel-shippo/zipball/eb073e294ea8879f13de7d2a759dd56cded89efa",
+                "reference": "eb073e294ea8879f13de7d2a759dd56cded89efa",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1",
+                "php": ">=5.5.9",
+                "shippo/shippo-php": "~1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bmartus\\LaravelShippo": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Martus",
+                    "email": "bmartus@gmail.com"
+                }
+            ],
+            "description": "Shippo for Laravel 5",
+            "time": "2016-05-25T21:08:36+00:00"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -1089,6 +1127,60 @@
                 "shell"
             ],
             "time": "2016-03-09T05:03:14+00:00"
+        },
+        {
+            "name": "shippo/shippo-php",
+            "version": "v1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goshippo/shippo-php-client.git",
+                "reference": "e4b577a0f45675db5df54e14877a2a9f463dfcad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/goshippo/shippo-php-client/zipball/e4b577a0f45675db5df54e14877a2a9f463dfcad",
+                "reference": "e4b577a0f45675db5df54e14877a2a9f463dfcad",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/Shippo/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shippo & Contributors",
+                    "homepage": "https://goshippo.com/"
+                }
+            ],
+            "description": "A PHP library for connecting with multiple carriers (FedEx, UPS, USPS) using Shippo.",
+            "homepage": "https://goshippo.com/",
+            "keywords": [
+                "FedEx",
+                "Uber",
+                "address",
+                "dhl",
+                "shipping",
+                "shyp",
+                "tracking",
+                "ups",
+                "usps"
+            ],
+            "time": "2018-03-02T21:16:24+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3428,7 +3520,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "bmartus/laravel-shippo": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

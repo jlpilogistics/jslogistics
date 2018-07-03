@@ -32,14 +32,15 @@
     <link rel="stylesheet" type="text/css" href="{{URL::asset('assets/css/style.css')}}">
 @stop
 @section('content')
+
             <section class="flexbox-container">
                 <div class="col-12 d-flex align-items-center justify-content-center">
                     <div class="col-md-4 col-10 box-shadow-2 p-0">
                         <div class="card border-grey border-lighten-3 m-0">
                             <div class="card-header border-0">
                                 <div class="card-title text-center">
-                                    <div class="p-1">
-                                        <img src="{{URL::asset('app-assets/images/logo/logo-dark.png')}}" alt="branding logo">
+                                    <div class="">
+                                        <img height="75" src="{{URL::asset('app-assets/images/logo/Jexsan.png')}}" alt="branding logo">
                                     </div>
                                 </div>
                                 <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
@@ -109,6 +110,7 @@
                     </div>
                 </div>
             </section>
+
 
 @stop
 
