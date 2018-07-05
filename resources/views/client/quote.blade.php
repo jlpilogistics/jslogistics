@@ -66,7 +66,7 @@ p{
                       </div>
                       <div class="col-xs-12 col-sm-3 quote-service">
                           {!! Form::label('transaction', 'Transaction') !!}
-                          {!! Form::select('transaction',array('import'=>'Import','domestic'=>'Domestic','export'=>'Export'),null, ['class'=>'quote-service', 'id'=>'cars']) !!}
+                          {!! Form::select('transaction',array('1'=>'Import','2'=>'Domestic','3'=>'Export'),null, ['class'=>'quote-service', 'id'=>'cars']) !!}
                     </div>
 </div>
 <hr>
@@ -134,7 +134,7 @@ p{
                   {{--</div>--}}
                     <div class="col-xs-12">
                       <!--<input id="submit" class="comment-submit qoute-sub" type="submit"  value="submit">-->
-                      {!! Form::submit('Request Quote', ['class'=>'quote-service']) !!}
+                      {!! Form::submit('Request Quote', ['class'=>'comment-submit qoute-sub']) !!}
                     </div>
                     {!! Form::close() !!}
                   </div>

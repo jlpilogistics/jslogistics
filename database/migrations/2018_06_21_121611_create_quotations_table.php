@@ -23,7 +23,7 @@ class CreateQuotationsTable extends Migration
             $table->integer('weight');
             $table->integer('quantity');
             $table->string('commodity');
-            $table->longText('message');
+            $table->longText('message')->nullable();
             $table->timestamps();
         });
     }

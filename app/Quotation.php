@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Quotation extends Model
 {
@@ -20,7 +21,14 @@ class Quotation extends Model
         'message'
     ];
 
-    public function sender(){
+    public function clients(){
         return $this->belongsTo('App\Client');
+    }
+    public function shiptypes(){
+        return $this->belongsToMany('App\ShipType');
+    }
+
+    public function getCreatedAtAttribute($value) {
+        return Carbon::parse($value)->toDayDateTimeString();
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3fa8df0abae9b837b85a2b3aac86ccbc",
+    "content-hash": "4f9124615a76e59fdc3c4173e9be5788",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -857,16 +857,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.31.0",
+            "version": "1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "4dbe0e51d24a4c7e000999324d21fc25edbf7b05"
+                "reference": "64563e2b9f69e4db1b82a60e81efa327a30ff343"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4dbe0e51d24a4c7e000999324d21fc25edbf7b05",
-                "reference": "4dbe0e51d24a4c7e000999324d21fc25edbf7b05",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/64563e2b9f69e4db1b82a60e81efa327a30ff343",
+                "reference": "64563e2b9f69e4db1b82a60e81efa327a30ff343",
                 "shasum": ""
             },
             "require": {
@@ -908,7 +908,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-06-24T14:32:22+00:00"
+            "time": "2018-07-05T06:59:26+00:00"
         },
         {
             "name": "nikic/php-parser",

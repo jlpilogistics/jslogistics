@@ -68,7 +68,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Zero configuration</h4>
+                        <h4 class="card-title">Pending Requests</h4>
                         <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                         <div class="heading-elements">
                             <ul class="list-inline mb-0">
@@ -81,18 +81,14 @@
                     </div>
                     <div class="card-content collapse show">
                         <div class="card-body card-dashboard">
-                            <p class="card-text">DataTables has most features enabled by default, so all you need
-                                to do to use it with your own ables is to call the construction
-                                function: $().DataTable();.</p>
-                            <table class="table table-striped table-bordered zero-configuration">
+                            <table class="table table-striped table-bordered zero-configuration table-xs">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Date of Request</th>
+                                    <th>Type of Shipment</th>
+                                    <th>Requested By</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                                 </thead>
                                 {{--<tbody>--}}
@@ -109,28 +105,37 @@
                                     {{--@endforeach--}}
                                 {{--</tbody>--}}
                                 <tbody>
-                                @foreach($sender as $senders)
+                                @foreach($client as $senders)
                                     @foreach($senders->quotation as $quote)
+                                        @foreach($quote->shiptypes as $shiptype)
                                         <tr>
 
+                                            <td>{{$quote->created_at}}</td>
+                                            <td>{!! \App\Shiptype::whereId($shiptype->pivot->shiptype_id)->first()->name; !!}</td>
+                                            <td>{{$senders->firstName}} {{$senders->lastName}}</td>
+                                            <td class="text-center">
 
-                                            <td>{{$quote->id}}</td>
-                                            <td>{{$quote->loadType}}</td>
-                                            <td>{{$quote->commodity}}</td>
+                                                    <i class="ft-alert-octagon font-medium-2"></i>
+                                                    <span>Pending</span>
+
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-info mr-1 mb-1"><i class="la la-folder-open"></i> View Request</button>
+                                            </td>
 
 
                                          </tr>
+                                        @endforeach
                                     @endforeach
                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Date of Request</th>
+                                    <th>Type of Shipment</th>
+                                    <th>Requested By</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                                 </tfoot>
                             </table>

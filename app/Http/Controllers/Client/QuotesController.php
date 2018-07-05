@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use App\Client;
 use App\Quotation;
+use App\Shiptype;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -39,7 +40,6 @@ class QuotesController extends Controller
      */
     public function store(Request $request)
     {
-
         $client = new Client;
         $client->lastName = $request->lname;
         $client->firstName = $request->fname;
@@ -51,7 +51,21 @@ class QuotesController extends Controller
         $client->country = $request->country;
         $client->zip = $request->zip;
         $client->save();
-
+        $quote = new Quotation;
+        $quote->client_id = $client->id;
+        $quote->mode = $request->mode;
+        $quote->container = $request->contype;
+        $quote->length = $request->length;
+        $quote->width = $request->width;
+        $quote->height = $request->height;
+        $quote->weight = $request->weight;
+        $quote->quantity = $request->quantity;
+        $quote->commodity = $request->commodity;
+        $quote->message = $request->message;
+        $quote->save();
+        $shiptype = Shiptype::where('id', $request->transaction)->first();
+        $quote->shiptypes()->save($shiptype);
+        return view('client.confirmation');
 
     }
 
