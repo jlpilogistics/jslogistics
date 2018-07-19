@@ -15,6 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+
         $this->middleware('auth');
     }
 
@@ -25,7 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        Session::flash('success_login','The user has successfully logged in ! ! !');
+
         return view('admin.index');
+        Session::flash('success_login','The user has successfully logged in ! ! !');
     }
 }

@@ -81,7 +81,7 @@
                     </div>
                     <div class="card-content collapse show">
                         <div class="card-body card-dashboard">
-                            <table class="table table-striped table-bordered zero-configuration table-xs">
+                            <table class="table table-striped table-bordered table-xs">
                                 <thead>
                                 <tr>
                                     <th>Date of Request</th>
@@ -120,7 +120,7 @@
 
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-info mr-1 mb-1"><i class="la la-folder-open"></i> View Request</button>
+                                                <button type="button" class="btn btn-info mr-1 mb-1"  onclick="window.location='{{ route('quotations.show', $senders->id) }}'"><i class="la la-folder-open"></i>View Request</button>
                                             </td>
 
 

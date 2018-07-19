@@ -11,7 +11,8 @@
         "barryvdh/laravel-ide-helper": "^2.4",
         "bmartus/laravel-shippo": "dev-master",
         "shippo/shippo-php": "^1.4",
-        "nesbot/carbon": "^1.32"
+        "nesbot/carbon": "^1.32",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

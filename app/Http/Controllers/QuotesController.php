@@ -74,7 +74,9 @@ class QuotesController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Client::with('quotation')->findOrFail($id);
+//        $quote = Quotation::with('clients');
+        return view('admin.quotation.view', compact('data'));
     }
 
     /**

@@ -66,7 +66,6 @@ class QuotesController extends Controller
         $shiptype = Shiptype::where('id', $request->transaction)->first();
         $quote->shiptypes()->save($shiptype);
         return view('client.confirmation');
-
     }
 
     /**

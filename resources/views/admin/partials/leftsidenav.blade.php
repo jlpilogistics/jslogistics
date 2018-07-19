@@ -9,7 +9,7 @@
                 <span data-i18n="nav.category.layouts">Manage Requests</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
                                                                         data-placement="right" data-original-title="Layouts"></i>
             </li>
-            <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Pending Requests</span><span class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
+            <li class=" nav-item"><a href="{{url('quotations')}}"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">Pending Requests</span><span class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
 
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-navicon"></i><span class="menu-title" data-i18n="nav.navbars.main">Import</span></a>

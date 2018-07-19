@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'jlpilogistics@gmail.com', 'name' => 'Jexsan Logistics Philippines Inc.'],
 
     /*
     |--------------------------------------------------------------------------
